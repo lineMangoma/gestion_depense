@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_depense/core/theme/theme.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -29,8 +30,20 @@ class WelcomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
-            SizedBox(height:50,width: double.infinity,child: ElevatedButton(onPressed: () {}, child: Text("Next"))),
-        
+            SizedBox(
+              height: 50,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: MaterialTheme.lightScheme().primary,
+                ),
+                child: Text(
+                  "Next",
+                  style: TextStyle(color: MaterialTheme.darkScheme().surface),
+                ),
+              ),
+            ),
           ],
         ),
       ),
