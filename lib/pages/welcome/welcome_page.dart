@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_depense/core/theme/theme.dart';
+import 'package:gestion_depense/pages/welcome/user_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -34,7 +35,10 @@ class WelcomePage extends StatelessWidget {
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> UserPage()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: MaterialTheme.lightScheme().primary,
                 ),
